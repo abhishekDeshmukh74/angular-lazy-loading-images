@@ -6,7 +6,8 @@
   </p>
 </div>
 <div class="images">
-  <div class="image-container" *ngFor="let image of images" (appLazyLoad)="image.shown = true">
+  <div class="image-container" *ngFor="let image of images" (deferLoad)="image.shown = true">
+    <h3>{{image.name}}</h3>
     <p>{{image.bio}}</p>
     <ng-container>
       <img name='beautiful-image' src={{image.url}}>
